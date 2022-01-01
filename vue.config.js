@@ -1,0 +1,34 @@
+module.exports={
+    devServer:{
+        proxy:{
+            '/ajax':{
+                target:'http://localhost:3000',
+                changeOrigin:true
+            },
+            '/users':{
+                target:'http://localhost:3000',
+                changeOrigin:true
+            },
+            '/admin':{
+                target:'http://localhost:3000',
+                changeOrigin:true
+            },
+            '/dormitoryadmin':{
+                target:'http://localhost:3000',
+                changeOrigin:true
+            },
+            '/instructor':{
+                target:'http://localhost:3000',
+                changeOrigin:true
+            },
+            '/student':{
+                target:'http://localhost:3000',
+                changeOrigin:true
+            },
+            '/teacher':{
+                target:'http://localhost:3000',
+                changeOrigin:true
+            }
+        }
+    }
+}
