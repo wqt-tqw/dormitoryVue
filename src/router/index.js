@@ -34,6 +34,11 @@ const routes = [
     component: dormitoryAnnualRanking
   },
   {
+    path: '/chatRoom',
+    name: 'chatRoom',
+    component:()=>import('@/views/register/chatRoom.vue')
+  },
+  {
     path: '/noticeDeail/:id',
     name: 'noticeDeail',
     component: noticeDeail
@@ -57,7 +62,7 @@ const router = new VueRouter({
 
 router.beforeEach((to,from,next)=>{
 
-  if(to.path!='/register'&&to.path!='/dormitoryAnnualRanking'&&to.name!='noticeDeail'&&to.name!='informationreply'){
+  if(to.name!='register'&&to.path!='/dormitoryAnnualRanking'&&to.name!='noticeDeail'&&to.name!='informationreply'&&to.name!='chatRoom'){
     console.log('盘查')
     console.log(to)
     console.log(from)
