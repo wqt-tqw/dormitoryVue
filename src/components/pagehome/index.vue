@@ -18,6 +18,7 @@
           </el-dropdown-menu>
         </el-dropdown>
         <span>{{$store.state.username}}</span>
+        <span style="margin-left:10px;cursor: pointer;" @click="chatRoomPush">聊天室</span>
       </el-header>
       
       <el-main>
@@ -88,6 +89,13 @@ export default {
     sidebar
   },
   methods: {
+    chatRoomPush(){
+      // this.$router.push('/chatRoom')
+      let routeData = this.$router.resolve({
+          path: "/chatRoom"
+        });
+        window.open(routeData.href, '_blank');
+    },
     edit(){
       this.dialogFormVisible = true
     },
